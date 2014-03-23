@@ -34,3 +34,8 @@ cd hardware/libhardware_legacy
 git fetch https://github.com/TeamCanjica/android_hardware_libhardware_legacy cm-11.0
 git cherry-pick 9c2250d32a1eda9afe3b5cefe3306104148aa532
 cd ../..
+echo -e $CL_BLU"Cherrypicking low in-call volume fix"$CL_RST
+cd packages/services/Telephony
+git fetch https://github.com/TeamCanjica/android_packages_services_Telephony cm-11.0
+git cherry-pick fdf281fdabe5e7517eb96f2faf159bbcc74ae4a6
+cd ../../..
