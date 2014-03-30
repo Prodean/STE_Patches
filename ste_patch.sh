@@ -26,7 +26,7 @@ git cherry-pick b6cb91b1f70c969bb0f818a24111c0ca055be590
 cd ..
 echo -e $CL_BLU"Cherrypicking vold patch to allow switching storages"$CL_RST
 cd vold
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_system_vold refs/changes/15/56515/2
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_system_vold refs/changes/15/56515/3
 git cherry-pick FETCH_HEAD
 cd ../..
 echo -e $CL_BLU"Cherrypicking vibrator fix"$CL_RST
@@ -39,3 +39,8 @@ cd packages/services/Telephony
 git fetch https://github.com/TeamCanjica/android_packages_services_Telephony cm-11.0
 git cherry-pick fdf281fdabe5e7517eb96f2faf159bbcc74ae4a6
 cd ../../..
+echo -e $CL_BLU"Cherrypicking \"OK Google\" fix"$CL_RST
+cd frameworks/base
+git fetch https://github.com/TeamCanjica/android_frameworks_base cm-11.0
+git cherry-pick bb9d91d07fdc20c2443c9668e2f20e392b25bac4
+cd ../../
